@@ -1,0 +1,23 @@
+{{#if isEditing}}
+	<div class="row-fluid todo-item">
+		<div class="span8">
+	  	{{view Em.TextField nameBinding="title" 
+	  											valueBinding="title"
+	  											classNames="span12"}}
+
+	  	{{view Em.TextArea nameBinding="description" 
+	  											valueBinding="description" 
+	  											classNames="span12"}}
+		</div>
+		<div class="span3 offset1">
+			<button type="submit" {{bindAttr class=":btn-small"}} {{action cancel}}>Cancel</button>
+			<button type="submit" {{bindAttr class=":btn-small :btn-primary"}} {{action save}}>Save</button>
+	</div>
+	</div>
+{{else}}
+	<div class="row-fluid todo-item" {{action startEdit on="click"}}>
+		<div class="span1 pull-right" {{action delete on="click"}}><a href="#">Del</a></div>
+		<div class="span10 simple-title">{{title}}</div>
+	  <div class="span9 offset1 muted">{{description}}</div>
+	</div>
+{{/if}}

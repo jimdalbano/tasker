@@ -1,0 +1,18 @@
+<div class="row-fluid">
+	<form class="form" id="add-task-form" >
+		<div class="span8">
+			<div>{{view Em.TextField placeholder="You aren't busy enough!" 
+																										valueBinding="title" 
+																										classNames="span12" 
+																										id="new_title"}}
+			</div>
+			<div>{{view Em.TextArea placeholder="Need more detail?" 
+																										valueBinding="description" 
+																										classNames="span12"}}
+			</div>
+		</div>
+		<div id="add-task-button-container" class="span4">
+			<button type="submit" {{bindAttr class=":btn :btn-large :pull-right isValid:btn-primary:btn-danger"}}><i class="icon-plus icon-white"></i> Do More!</button>
+		</div>
+	</form>
+</div>

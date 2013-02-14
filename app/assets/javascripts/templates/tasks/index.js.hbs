@@ -1,0 +1,11 @@
+<div class="addtask">
+  {{view App.TaskNewView controllerBinding=controller.controllers.task_new}}
+</div>
+
+<ul class="unstyled todo-list">
+  {{#each task in controller}}
+    {{#unless task.isNew}}
+      {{view App.TaskView }}
+    {{/unless}}
+  {{/each}}
+</ul>

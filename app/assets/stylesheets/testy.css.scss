@@ -1,0 +1,33 @@
+.centered {
+	text-align: center;
+}
+
+.addtask {
+  padding: 1em;
+  margin-bottom: .5em;
+  background-color: lightgray;
+}
+
+#add-task-button-container{
+	padding: 2em;
+}
+
+.todo-list {
+  background: lightgray;
+}
+
+.todo-item-well {
+	@extend .well;
+	margin-bottom: .2em;
+	padding: 0px;
+}
+
+.todo-item {
+	padding: .5em 1em .25em 1em;
+}
+
+.simple-title {
+	font-size: 1.25em;
+	font-weight: bold;
+}
+

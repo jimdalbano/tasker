@@ -1,0 +1,18 @@
+defaults: &defaults
+  adapter: postgresql
+  host: pg-local
+  port: 5432
+  username: postgres
+  password: postgres
+
+development:
+  database: tasker_development
+  <<: *defaults
+
+test:
+  database: tasker_test
+  <<: *defaults
+
+production:
+  database: tasker_production
+  <<: *defaults
